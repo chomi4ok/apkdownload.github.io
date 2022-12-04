@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yrsa:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 20px;
+}
+body{
+	background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+section{
+	min-height: 30vh;
+}
+nav, section, #stopka{
+    display: flex;/*uruchamiamy flexbox i środkujemy zawartośc każdej sekcji*/
+    align-items:center;/*wyśrodkowanie w poziomie*/
+}
+section, #stopka{
+    scroll-margin-top: 5rem;/*margines odsunięcia przesunięcia*/
+}
+
+.index{
+    max-width: 1200px;
+	margin: 0 auto; /* środkowanie elementów blokowych */
+}
+
+nav{
+    background-color: #f2f2f2;
+    position: fixed; /*zamraża element w oknie przeglądarki    */
+    width: 100%; /*bo position: fixed; kasuje 100%*/
+    padding: 0.5rem 0;
+    z-index: 1;
+}
+nav .index{}
+nav ol{
+    display: flex;/*flexbox*/
+    gap:1rem;
+}
+nav ol li{/*items*/}
+nav ol li a {
+
+    font-family: 'Yrsa', serif;
+    width: 10rem;
+    text-align: center;
+    display: block;
+    padding: 1em;/* em - odnoszą się do wielkości fontu w elementcie*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #222;
+    transition: 600ms;
+    font-weight: 500;
+}
+nav ol li a:hover{
+    background-color: #222;
+    color: white;
+    font-weight: 900;
+}
+#download .index {
+    margin-top: 5rem;
+}
+#download .index {
+    display: flex;
+    gap: 1rem;
+}
+#download img {
+    width:5em;
+    height:5em;
+}
+#download .index p{
+    margin-top: 1px;
+}
+#download .index a{
+    font-family: 'Yrsa', serif;
+    text-decoration: none;
+    color:#f2f2f2;
+    font-size: 1em;
+    padding: 0.1rem;
+}
+#download #a{
+    border-radius: 1em;
+    margin-left: 1.5rem;
+    width: 10rem;
+    padding: 0.3em;
+    margin-top: 0.3rem;
+    background-color: green;
+}
+
+#info .index h2{
+    font-family: 'Yrsa', serif;
+    margin-left: 6rem;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+#info .index .spoiler_content {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#info .index .spoiler_content p {
+    margin-bottom: 3px;
+    text-align: justify;
+    margin-top: 0.5rem;
+    font-size: 0.8em;
+}
+
+#info  .index .read-more-state {
+    display: none;
+}
+
+#info  .index .text_hide {
+    opacity: 0;
+    max-height: 0;
+    font-size: inherit;
+    transition: opacity 0.4s ease-in-out;
+}
+#info .index .read-more-state:checked~.spoiler_content .text_hide {
+    opacity: 1;
+    font-size: 0.8em;
+    max-height: 999em;
+}
+
+#info .index .read-more-state:checked~.spoiler_content p {
+    margin-bottom: 10px;
+}
+
+#info .index .read-more-state~.read-more-trigger:before {
+    content: 'Więcej informacji';
+}
+
+#info .index .read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: .9em;
+    line-height: 2;
+    border: none;
+    border-radius: .5em;
+    margin-bottom: 5px;
+    background: green;
+}
+
+
+#about .index h2{
+    font-size: 1.5em;
+    font-family: 'Yrsa', serif;
+    font-weight: 500;
+}
+#about .index main{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+#about .index b{
+    font-weight: bold;
+}
+#about .index main div{
+    margin-top: 1rem;
+    width: 12em;
+}
+#about .index p{
+    font-size: 0.8em;
+}
+
+#versions {
+margin-top: 0;
+}
+#versions h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Yrsa', serif
+}
+
+#versions ol{
+    display: flex;/*flexbox*/
+    gap:1rem;
+}
+#versions .index ol li a {
+    width: 10rem;
+    display: block;
+    padding: 1.2em;/* em - odnoszą się do wielkości fontu w elementcie*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 300;}
+footer {
+    background-color: #f2f2f2;
+    padding: 2rem;
+}
+
+footer h6{
+    font-family: 'Yrsa', serif;
+    text-align: center;
+}
